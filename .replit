@@ -1,5 +1,6 @@
 hidden=[".config"]
 modules = ["web", "nix"]
+run = "npx serve -p 8080"
 
 # hosting is currently hardcoded for this language
 # [hosting]
@@ -48,3 +49,6 @@ args = "python3 -m http.server 3000"
 [[ports]]
 localPort = 3000
 externalPort = 80
+
+[deployment]
+run = ["sh", "-c", "npx serve -p 8080"]
